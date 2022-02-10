@@ -1,5 +1,5 @@
 ### Inpyo Jeon
-Mediocre Frontend Developer
+Mediocre Frontend Developer / Awesome Writer
 
 #### Experience
 * IT Lab, Chungdahm Learning
@@ -19,5 +19,5 @@ Mediocre Frontend Developer
 
 #### Interesting Facts
 * Translated over 50 English books, still cannot use proper English
-* Wrote a Batman story for DC Comics
+* Wrote a Batman story arc for DC Comics
 * Carried the torch for 2018 Winter Olympics

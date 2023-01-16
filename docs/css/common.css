@@ -32,3 +32,4 @@ nav button#ig img { height:32px; }
 article { line-height:1.2rem; }
 article section { display:none; padding:0.5rem; }
 article section.active { display:block; }
+article p.kor u { text-underline-position:under; }

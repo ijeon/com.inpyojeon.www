@@ -41,7 +41,7 @@ nav button.lchange { margin-left:auto; padding-left:2.5rem; background-image:url
 article { line-height:1.5rem; }
 article section { display:none; padding:2rem 1rem; }
 article section.active { display:block; }
-article h1 { font-size:1.3rem; font-weight:800; }
+article h1 { font-size:1.35rem; font-weight:800; }
 article h2 { font-size:0.9rem; color:#aaa; margin-bottom:0.5rem; }
 article h3 { font-size:0.8rem; color:rgb(221 133 32); font-weight:600; }
 article h3:not(:first-of-type) { margin-top:2rem; }

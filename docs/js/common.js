@@ -1,4 +1,5 @@
-$(document).on('click', 'nav button', tabs).on('click', '.gallery button', lbox).on('click', '.dim', lboxkill);
+$(document).on('click', 'nav button', tabs).on('click', '.gallery button', lBox).on('click', '.dim', lBoxKill);
+$(window).on('scroll', navCheck);
 
 $.fn.activate = function(){
     return this.addClass('active').siblings().removeClass('active');
@@ -7,24 +8,25 @@ $.fn.activate = function(){
 function tabs(){
     var idx = $(this).index();
 
-    if (idx < 3) $(this).add($('article section').eq(idx)).activate();
-    else lchange();
+    if (idx < 3) $('html, body').animate({ scrollTop: $('article section').eq(idx).offset().top - 48 }, 0);    
+    else $('body').toggleClass('eng');
 }
 
-function lchange(){
-    $('body').toggleClass('eng');
-}
-
-function lbox(){
+function lBox(){
     var csrc = $(this).find('img').attr('src').replace('-thumb', '');
 
     $('.dim').append('<img src="' + csrc + '">').addClass('active');
 }
 
-function lboxkill(){
+function lBoxKill(){
     $('.dim').empty().removeClass('active');
 }
 
-window.onpopstate = function(event) {
-	alert('?'); 
+function navCheck(){
+    var _top = $(window).scrollTop();
+    var _sec1 = $('section').eq(1).offset().top - 48;
+    var _sec2 = $('section').eq(2).offset().top - 48;
+    var _idx = (_top < _sec1) ? 0 : ((_top >= _sec1 && _top < _sec2) ? 1 : 2);
+
+    $('nav button').eq(_idx).activate();
 }

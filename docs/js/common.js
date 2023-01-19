@@ -8,7 +8,7 @@ $.fn.activate = function(){
 function tabs(){
     var idx = $(this).index();
 
-    if (idx < 3) $('html, body').animate({ scrollTop: $('article section').eq(idx).offset().top - 48 }, 0);    
+    if (idx < 3) $('html, body').stop().animate({ scrollTop: $('article section').eq(idx).offset().top - 48 }, 200);
     else $('body').toggleClass('eng');
 }
 

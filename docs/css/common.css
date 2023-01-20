@@ -36,23 +36,26 @@ nav { position:sticky; display:flex; top:0; background-color:#222; z-index:5; }
 nav:before { content:''; position:fixed; top:0; left:0; width:100%; height:3rem; background-color:#222; z-index:-1; }
 nav button { padding:1rem; transition:all .1s ease-in-out; }
 nav button.active { background-color:#333; font-weight:600; }
-nav button.lchange { margin-left:auto; padding-left:2.5rem; background-image:url('../img/lchange.svg'); background-repeat:no-repeat; background-size:20px; background-position:1rem; }
+nav button.lchange { margin-left:auto; padding-left:2.5rem; background-image:url('../img/lchange.svg'); background-repeat:no-repeat; background-size:1.25rem; background-position:1rem; }
 
 article { line-height:1.5rem; }
 article section { padding:2rem 1rem; }
 article hr { width:calc(100% - 2rem); display:block; border-bottom:1px solid #222; margin:0 auto; }
 article h1 { font-size:1.2rem; font-weight:800; }
-article h2 { font-size:0.9rem; color:#aaa; margin-bottom:0.5rem; }
-article h3 { font-size:0.8rem; color:rgb(221 133 32); font-weight:600; }
+article h2 { font-size:0.9rem; color:#999; margin-bottom:0.75rem; }
+article h3 { font-size:0.8rem; color:#dd8520; }
 article h3:not(:first-of-type) { margin-top:2rem; }
 article em { font-weight:600; }
 article .gallery { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1.5rem; }
 article .gallery button { position:relative; width:6rem; height:6rem; background-color:#333; font-size:0; overflow:hidden; }
 article .gallery button img { width:100%; transition:all .2s ease-in-out; }
 
-.about h1 { margin-bottom:1rem; }
+.about h1 { margin-bottom:0.75rem; }
+.about .lf { display:block; height:0.5rem; }
+.link { display:flex; margin-top:1rem; flex-wrap:wrap; gap:0 1rem; }
+.link a { color:#dd8520; padding-right:1.25rem; background-image:url('../img/link.svg'); background-repeat:no-repeat; background-size:1rem; background-position:right; }
 
-.contact p a { color:rgb(221 133 32); font-weight:600; }
+.contact p a { color:#dd8520; font-weight:600; }
 .contact form { display:block; width:100%; margin-top:2rem; }
 .contact form fieldset { max-width:30rem; margin-bottom:2rem; }
 .contact form fieldset.honeypot-field { display:none; }
@@ -61,7 +64,7 @@ article .gallery button img { width:100%; transition:all .2s ease-in-out; }
 .contact form fieldset textarea { display:block; width:100%; background-color:#555; padding:0.5rem; margin-top:0.5rem; }
 .contact form .sendbtn { width:100%; padding:0.5rem; max-width:30rem; background-color:#222; }
 .contact form .sendbtn.hidden { display:none; }
-.contact form .loading_message { display:none; color:rgb(221 133 32); }
+.contact form .loading_message { display:none; color:#dd8520; }
 .contact form .loading_message.active { display:block; }
 .contact form .thankyou_message { opacity:0; visibility:hidden; transition:all .5s ease-in-out; }
 .contact form .thankyou_message.active { opacity:1; visibility:visible; }

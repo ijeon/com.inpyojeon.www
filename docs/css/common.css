@@ -51,11 +51,11 @@ article .gallery button { position:relative; width:6rem; height:6rem; background
 article .gallery button img { width:100%; transition:all .2s ease-in-out; }
 
 .about h1 { margin-bottom:0.75rem; }
-.about .lf { display:block; height:0.5rem; }
+.lf { display:block; height:0.5rem; }
 .link { display:flex; margin-top:1rem; flex-wrap:wrap; gap:0 1rem; }
 .link a { color:#dd8520; padding-right:1.25rem; background-image:url('../img/link.svg'); background-repeat:no-repeat; background-size:1rem; background-position:right; }
 
-.contact p a { color:#dd8520; font-weight:600; }
+.contact p a { color:#dd8520; }
 .contact form { display:block; width:100%; margin-top:2rem; }
 .contact form fieldset { max-width:30rem; margin-bottom:2rem; }
 .contact form fieldset.honeypot-field { display:none; }

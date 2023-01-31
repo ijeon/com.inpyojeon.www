@@ -50,7 +50,8 @@ article .gallery { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1.5rem; 
 article .gallery button { position:relative; width:6rem; height:6rem; background-color:#333; font-size:0; overflow:hidden; }
 article .gallery button img { width:100%; transition:all .2s ease-in-out; }
 
-.about h1 { margin-bottom:0.75rem; }
+section.about h1 { margin-bottom:0.75rem; }
+section.about img { display:block; width:100%; max-width:20rem; margin:0 auto 1.5rem; opacity:.8; }
 .lf { display:block; height:0.5rem; }
 .link { display:flex; margin-top:1rem; flex-wrap:wrap; gap:0 1rem; }
 .link a { color:#dd8520; padding-right:1.25rem; background-image:url('../img/link.svg'); background-repeat:no-repeat; background-size:1rem; background-position:right; }
@@ -74,7 +75,6 @@ article .gallery button img { width:100%; transition:all .2s ease-in-out; }
     article .gallery button:after { content:''; position:absolute; top:0; left:0; width:100%; height:100%; background-color:#000; opacity:.2; transition:all .2s ease-in-out; }
     article .gallery button:hover:after { opacity:0; }
     article .gallery button:hover img { transform:scale(1.06); }
-    .about img { max-width:600px; }
     .contact form .sendbtn { transition:all .1s ease-in-out; }
     .contact form .sendbtn:hover { background-color:#333; }
 }

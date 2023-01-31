@@ -24,8 +24,8 @@ function lBoxKill(){
 
 function navCheck(){
     var _top = $(window).scrollTop();
-    var _sec1 = $('section').eq(1).offset().top - $(window).height()/2 - $('nav').outerHeight();
-    var _sec2 = $('section').eq(2).offset().top - $(window).height()/2 - $('nav').outerHeight();
+    var _sec1 = $('section').eq(1).offset().top - $('nav').outerHeight();
+    var _sec2 = $('section').eq(2).offset().top - $('nav').outerHeight();
     var _idx = (_top < _sec1) ? 0 : ((_top >= _sec1 && _top < _sec2) ? 1 : 2);
 
     $('nav button').eq(_idx).activate();

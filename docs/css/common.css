@@ -39,7 +39,7 @@ nav button.active { background-color:#333; font-weight:600; }
 nav button.lchange { margin-left:auto; padding-left:2.5rem; background-image:url('../img/lchange.svg'); background-repeat:no-repeat; background-size:1.25rem; background-position:1rem; }
 
 article { line-height:1.5rem; }
-article section { padding:2rem 1rem; }
+article section { padding:2.5rem 1rem; }
 article hr { width:calc(100% - 2rem); display:block; border-bottom:1px solid #222; margin:0 auto; }
 article h1 { font-size:1.2rem; font-weight:800; }
 article h2 { font-size:0.9rem; color:#999; margin-bottom:0.75rem; }
@@ -56,7 +56,7 @@ article .gallery button img { width:100%; transition:all .2s ease-in-out; }
 .link a { color:#dd8520; padding-right:1.25rem; background-image:url('../img/link.svg'); background-repeat:no-repeat; background-size:1rem; background-position:right; }
 
 .contact p a { color:#dd8520; }
-.contact form { display:block; width:100%; margin-top:2rem; }
+.contact form { display:block; width:100%; margin-top:3rem; }
 .contact form fieldset { max-width:30rem; margin-bottom:2rem; }
 .contact form fieldset.honeypot-field { display:none; }
 .contact form fieldset p { font-size:0.9rem; }

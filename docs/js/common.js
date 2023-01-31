@@ -8,7 +8,7 @@ $.fn.activate = function(){
 function tabs(){
     var idx = $(this).index();
 
-    if (idx < 3) $('html, body').stop().animate({ scrollTop: $('article section').eq(idx).offset().top - 48 }, 200);
+    if (idx < 3) $('html, body').stop().animate({ scrollTop: $('article section').eq(idx).offset().top - $('nav').outerHeight() }, 200);
     else $('body').toggleClass('eng');
 }
 
@@ -24,8 +24,8 @@ function lBoxKill(){
 
 function navCheck(){
     var _top = $(window).scrollTop();
-    var _sec1 = $('section').eq(1).offset().top - 48;
-    var _sec2 = $('section').eq(2).offset().top - 48;
+    var _sec1 = $('section').eq(1).offset().top - $(window).height()/2 - $('nav').outerHeight();
+    var _sec2 = $('section').eq(2).offset().top - $(window).height()/2 - $('nav').outerHeight();
     var _idx = (_top < _sec1) ? 0 : ((_top >= _sec1 && _top < _sec2) ? 1 : 2);
 
     $('nav button').eq(_idx).activate();

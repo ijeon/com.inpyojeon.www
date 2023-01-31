@@ -41,7 +41,7 @@ nav button.lchange { margin-left:auto; padding-left:2.5rem; background-image:url
 
 article { line-height:1.5rem; }
 article section { padding:2.5rem 1rem; }
-article hr { width:calc(100% - 2rem); display:block; border-bottom:1px solid #222; margin:0 auto; }
+article hr { width:calc(100% - 2rem); display:block; border-bottom:1px solid #333; margin:0 auto; }
 article h1 { font-size:1.2rem; font-weight:800; }
 article h2 { font-size:0.9rem; color:#999; margin-bottom:0.75rem; }
 article h3 { font-size:0.8rem; color:#dd8520; }
@@ -63,8 +63,11 @@ section.about img { display:block; width:14rem; margin-bottom:2rem; }
 .contact form fieldset { display:block; width:100%; margin-bottom:2rem; font-size:1rem; }
 .contact form fieldset.honeypot-field { display:none; }
 .contact form fieldset p { font-size:0.9rem; }
-.contact form fieldset input { border-bottom:1px solid #888; width:100%; padding:0.5rem; }
-.contact form fieldset textarea { display:block; width:100%; background-color:#555; padding:0.5rem; margin-top:0.5rem; }
+.contact form fieldset input { border-bottom:1px dashed #666; width:100%; padding:0.5rem; }
+.contact form fieldset input:focus { border-bottom:1px solid #777; }
+.contact form fieldset textarea { display:block; width:100%; background-color:#444; padding:0.5rem; margin-top:0.5rem; }
+.contact form fieldset textarea:focus { background-color:#555; }
+.contact form fieldset input, .contact form fieldset textarea { transition:all .12s ease-in-out; }
 .contact form .sendbtn { width:100%; padding:0.5rem; background-color:#222; font-size:1rem; }
 .contact form .sendbtn.hidden { display:none; }
 .contact form .loading_message { display:none; color:#dd8520; }

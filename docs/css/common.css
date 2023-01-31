@@ -19,6 +19,7 @@ u { text-decoration:revert; text-underline-position:under; }
 :where([draggable="true"]) { -webkit-user-drag:element; }
 input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button { -webkit-appearance:none; appearance:none; margin:0; }
 button { text-align:center; }
+a, p, span { word-break:break-all; }
 
 :root { font-size:16px; line-height:1; font-family:pretendard; }
 body { position:relative; min-width:340px; background-color:#111; font-size:1rem; color:#ddd; }
@@ -50,20 +51,21 @@ article .gallery { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1.5rem; 
 article .gallery button { position:relative; width:6rem; height:6rem; background-color:#333; font-size:0; overflow:hidden; }
 article .gallery button img { width:100%; transition:all .2s ease-in-out; }
 
+section.about { position:relative; }
 section.about h1 { margin-bottom:0.75rem; }
-section.about img { display:block; width:100%; max-width:20rem; margin:0 auto 1.5rem; opacity:.8; }
+section.about img { display:block; width:14rem; margin-bottom:2rem; }
 .lf { display:block; height:0.5rem; }
 .link { display:flex; margin-top:1rem; flex-wrap:wrap; gap:0 1rem; }
 .link a { color:#dd8520; padding-right:1.25rem; background-image:url('../img/link.svg'); background-repeat:no-repeat; background-size:1rem; background-position:right; }
 
 .contact p a { color:#dd8520; }
-.contact form { display:block; width:100%; margin-top:3rem; }
-.contact form fieldset { max-width:30rem; margin-bottom:2rem; }
+.contact form { display:block; width:100%; margin-top:3rem; font-size:0; }
+.contact form fieldset { display:block; width:100%; margin-bottom:2rem; font-size:1rem; }
 .contact form fieldset.honeypot-field { display:none; }
 .contact form fieldset p { font-size:0.9rem; }
 .contact form fieldset input { border-bottom:1px solid #888; width:100%; padding:0.5rem; }
 .contact form fieldset textarea { display:block; width:100%; background-color:#555; padding:0.5rem; margin-top:0.5rem; }
-.contact form .sendbtn { width:100%; padding:0.5rem; max-width:30rem; background-color:#222; }
+.contact form .sendbtn { width:100%; padding:0.5rem; background-color:#222; font-size:1rem; }
 .contact form .sendbtn.hidden { display:none; }
 .contact form .loading_message { display:none; color:#dd8520; }
 .contact form .loading_message.active { display:block; }
@@ -75,6 +77,10 @@ section.about img { display:block; width:100%; max-width:20rem; margin:0 auto 1.
     article .gallery button:after { content:''; position:absolute; top:0; left:0; width:100%; height:100%; background-color:#000; opacity:.2; transition:all .2s ease-in-out; }
     article .gallery button:hover:after { opacity:0; }
     article .gallery button:hover img { transform:scale(1.06); }
+    .contact form fieldset.half { display:inline-block; width:calc(calc(100% - 2rem) * 0.6); }
+    .contact form fieldset.half:first-child { margin-right:2rem; width:calc(calc(100% - 2rem) * 0.4); }
     .contact form .sendbtn { transition:all .1s ease-in-out; }
     .contact form .sendbtn:hover { background-color:#333; }
+    section.about { padding-right:16.5rem; }
+    section.about img { position:absolute; top:4.5rem; right:1rem; }
 }

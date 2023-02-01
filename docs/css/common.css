@@ -19,7 +19,7 @@ u { text-decoration:revert; text-underline-position:under; }
 :where([draggable="true"]) { -webkit-user-drag:element; }
 input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button { -webkit-appearance:none; appearance:none; margin:0; }
 button { text-align:center; }
-a, p, span { word-break:break-all; }
+/* a, p, span { word-break:break-all; } */
 
 :root { font-size:16px; line-height:1; font-family:pretendard; }
 body { position:relative; min-width:340px; background-color:#111; font-size:1rem; color:#ddd; }
@@ -45,18 +45,21 @@ article hr { width:calc(100% - 2rem); display:block; border-bottom:1px solid #33
 article h1 { font-size:1.2rem; font-weight:800; }
 article h2 { font-size:0.9rem; color:#999; margin-bottom:0.75rem; }
 article h3 { font-size:0.8rem; color:#dd8520; }
-article h3:not(:first-of-type) { margin-top:2rem; }
 article em { font-weight:600; }
 article .gallery { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1.5rem; }
 article .gallery button { position:relative; width:6rem; height:6rem; background-color:#333; font-size:0; overflow:hidden; }
 article .gallery button img { width:100%; transition:all .2s ease-in-out; }
 
+section.work > div { margin-top:2rem; }
+section.work > div:first-of-type, section.work > div:nth-of-type(2) { margin-top:0; }
 section.about { position:relative; }
 section.about h1 { margin-bottom:0.75rem; }
 section.about img { display:block; width:14rem; margin-bottom:2rem; }
+
 .lf { display:block; height:0.5rem; }
 .link { display:flex; margin-top:1rem; flex-wrap:wrap; gap:0 1rem; }
 .link a { color:#dd8520; padding-right:1.25rem; background-image:url('../img/link.svg'); background-repeat:no-repeat; background-size:1rem; background-position:right; }
+body.eng .link.eng { display:flex; }
 
 .contact p a { color:#dd8520; }
 .contact form { display:block; width:100%; margin-top:3rem; font-size:0; }
@@ -74,6 +77,16 @@ section.about img { display:block; width:14rem; margin-bottom:2rem; }
 .contact form .loading_message.active { display:block; }
 .contact form .thankyou_message { opacity:0; visibility:hidden; transition:all .5s ease-in-out; }
 .contact form .thankyou_message.active { opacity:1; visibility:visible; }
+
+footer { padding-bottom:2rem; }
+footer #clock { position:relative; display:block; margin:0 auto; width:81px; height:81px; border-radius:50%; background-color:rgba(255,255,255,.05); transition:all .12s ease-in-out; }
+footer #clock:hover { background-color:rgba(255,255,255,.1); }
+footer #clock div { position:absolute; top:40px; transform-origin:top center; transition:all 1s ease-in-out; }
+footer #clock #hour { width:3px; height:20px; left:39px; background:#aaa; z-index:1; }
+footer #clock #min { width:3px; height:30px; left:39px; background:#ccc; z-index:2; }
+footer #clock #sec { width:1px; height:30px; left:40px; background:#dd8520; z-index:3; }
+footer #clock.set #hour { transform:rotate(143.5deg) !important; }
+footer #clock.set #min { transform:rotate(102deg) !important; }
 
 @media all and (min-width: 640px) {
     nav button:hover { background-color:#333; }

@@ -1,12 +1,22 @@
-$(document).on('click', 'nav button', tabs).on('click', '.gallery button', lBox).on('click', '.dim', lBoxKill).on('click', '#clock', toBatcave);
-$(window).on('scroll', navCheck).on('load', init);
+$(document)
+.on('click', 'nav button', tabs)
+.on('click', '.gallery button, .dim', lBox)
+.on('click', '#clock', toBatcave);
+
+$(window)
+.on('scroll', navCheck)
+.on('load', init);
 
 var tick;
 
 function init(){
-    getTime();
-    setClock();
-    tick = setInterval(getTime, 1000);
+    if ($('body').hasClass('cave')) {
+        
+    } else {
+        getTime();
+        setClock();
+        tick = setInterval(getTime, 1000);
+    }    
 }
 
 $.fn.activate = function(){
@@ -21,13 +31,12 @@ function tabs(){
 }
 
 function lBox(){
-    var csrc = $(this).find('img').attr('src').replace('-thumb', '');
+    if ($('.dim').hasClass('active')) $('.dim').empty().removeClass('active');
+    else {
+        var csrc = $(this).find('img').attr('src').replace('-thumb', '');
 
-    $('.dim').append('<img src="' + csrc + '">').addClass('active');
-}
-
-function lBoxKill(){
-    $('.dim').empty().removeClass('active');
+        $('.dim').append('<img src="' + csrc + '">').addClass('active');
+    }
 }
 
 function navCheck(){
@@ -45,13 +54,15 @@ function getTime(){
     const min = date.getMinutes();
     const sec = date.getSeconds();
 
+
+
     setClock(hour, min, sec);
 }
 
 function setClock(hour, min, sec){
-    var degH = Math.round(360 * (hour / 12)) + min * 0.5 - 180;
-    var degM = Math.round(360 * (min / 60)) - 180;
-    var degS = Math.round(360 * (sec / 60)) - 180;
+    var degH = hour * 30 + min * 0.5 - 180;
+    var degM = min * 6 - 180;
+    var degS = sec * 6 - 180;
 
     $('#hour').css({ transform: 'rotate(' + degH + 'deg)' });
     $('#min').css({ transform: 'rotate(' + degM + 'deg)' });
@@ -61,7 +72,13 @@ function setClock(hour, min, sec){
 function toBatcave(){
     clearInterval(tick);
     $('#clock').addClass('set');
-    setTimeout(function(){
 
-    }, 1000);
+    if ($(this).hasClass('hide')) {
+        window.location.href="cave.html";
+    }
+    else {
+        setTimeout(function(){
+            $('#clock').addClass('hide');
+        }, 1300);
+    }    
 }

@@ -19,7 +19,7 @@ u { text-decoration:revert; text-underline-position:under; }
 :where([draggable="true"]) { -webkit-user-drag:element; }
 input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button { -webkit-appearance:none; appearance:none; margin:0; }
 button { text-align:center; }
-/* a, p, span { word-break:break-all; } */
+a, p, span, h1, h2, h3, h4 { word-break:break-word; }
 
 :root { font-size:16px; line-height:1; font-family:pretendard; }
 body { position:relative; min-width:340px; background-color:#111; font-size:1rem; color:#ddd; }
@@ -78,15 +78,27 @@ body.eng .link.eng { display:flex; }
 .contact form .thankyou_message { opacity:0; visibility:hidden; transition:all .5s ease-in-out; }
 .contact form .thankyou_message.active { opacity:1; visibility:visible; }
 
-footer { padding-bottom:2rem; }
+footer { padding:2rem 1rem 8rem; }
 footer #clock { position:relative; display:block; margin:0 auto; width:81px; height:81px; border-radius:50%; background-color:rgba(255,255,255,.05); transition:all .12s ease-in-out; }
 footer #clock:hover { background-color:rgba(255,255,255,.1); }
-footer #clock div { position:absolute; top:40px; transform-origin:top center; transition:all 1s ease-in-out; }
-footer #clock #hour { width:3px; height:20px; left:39px; background:#aaa; z-index:1; }
-footer #clock #min { width:3px; height:30px; left:39px; background:#ccc; z-index:2; }
-footer #clock #sec { width:1px; height:30px; left:40px; background:#dd8520; z-index:3; }
+footer #clock div { position:absolute; top:40px; transform-origin:top center; transform:rotate(-180deg); }
+footer #clock #hour { width:3px; height:20px; left:39px; background-color:#aaa; z-index:1; }
+footer #clock #min { width:3px; height:30px; left:39px; background-color:#ccc; z-index:2; }
+footer #clock #sec { width:1px; height:30px; left:40px; background-color:#dd8520; z-index:3; }
+footer #clock.set, footer #clock.set:after, footer #clock.set div { transition:all 1s ease-in-out; }
+footer #clock.set:after { position:absolute; width:30px; height:30px; border-radius:50%; background-color:#fff; content:''; top:15px; right:15px; opacity:0; }
 footer #clock.set #hour { transform:rotate(143.5deg) !important; }
 footer #clock.set #min { transform:rotate(102deg) !important; }
+footer #clock.set.hide { background-color:#dd8520; }
+footer #clock.set.hide:after { opacity:.4; }
+footer #clock.set.hide div { opacity:0; }
+
+.cave article > h1 { text-align:center; padding-top:3rem; }
+.cave section.showroom { display:grid; grid-template-columns:repeat(auto-fill, minmax(40%, 1fr)); grid-gap:2rem 1rem; }
+.cave section .item { width:100% }
+.cave section .item img { width:100%; display:block; margin-bottom:1rem; }
+.cave section .item h2 { margin-bottom:0; }
+.cave section .item h3 { margin-top:0.5rem; }
 
 @media all and (min-width: 640px) {
     nav button:hover { background-color:#333; }
@@ -99,4 +111,5 @@ footer #clock.set #min { transform:rotate(102deg) !important; }
     .contact form .sendbtn:hover { background-color:#333; }
     section.about { padding-right:16.5rem; }
     section.about img { position:absolute; top:4.5rem; right:1rem; }
+    .cave section.showroom { grid-template-columns:repeat(auto-fill, minmax(30%, 1fr)); }
 }

@@ -78,8 +78,8 @@ body.eng .link.eng { display:flex; }
 .contact form .thankyou_message { opacity:0; visibility:hidden; transition:all .5s ease-in-out; }
 .contact form .thankyou_message.active { opacity:1; visibility:visible; }
 
-footer { padding:2rem 1rem 8rem; }
-footer #clock { position:relative; display:block; margin:0 auto; width:81px; height:81px; border-radius:50%; background-color:rgba(255,255,255,.05); transition:all .12s ease-in-out; }
+footer { padding:2rem 1rem; }
+footer #clock { position:relative; display:block; margin:0 auto; width:81px; height:81px; border-radius:50%; background-color:rgba(255,255,255,.05); transition:all .12s ease-in-out; cursor:grab; }
 footer #clock:hover { background-color:rgba(255,255,255,.1); }
 footer #clock div { position:absolute; top:40px; transform-origin:top center; transform:rotate(-180deg); }
 footer #clock #hour { width:3px; height:20px; left:39px; background-color:#aaa; z-index:1; }

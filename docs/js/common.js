@@ -1,5 +1,6 @@
 $(document)
-.on('click', 'nav button', tabs)
+.on('click', 'nav#gnb button', tabs)
+.on('click', 'nav#tags button', tags)
 .on('click', '.gallery button, .dim', lBox)
 .on('click', '#clock', toBatcave);
 
@@ -30,6 +31,13 @@ function tabs(){
     else $('body').toggleClass('eng');
 }
 
+function tags(){
+    var idx = $(this).index();
+
+    $(this).add($('section').eq(idx)).activate();
+    
+}
+
 function lBox(){
     if ($('.dim').hasClass('active')) $('.dim').empty().removeClass('active');
     else {
@@ -44,11 +52,11 @@ function navCheck(){
         
     } else {
         var _top = $(window).scrollTop();
-        var _sec1 = $('section').eq(1).offset().top - $('nav').outerHeight();
-        var _sec2 = $('section').eq(2).offset().top - $('nav').outerHeight();
+        var _sec1 = $('section').eq(1).offset().top - $('nav#gnb').outerHeight();
+        var _sec2 = $('section').eq(2).offset().top - $('nav#gnb').outerHeight();
         var _idx = (_top < _sec1) ? 0 : ((_top >= _sec1 && _top < _sec2) ? 1 : 2);
 
-        $('nav button').eq(_idx).activate();
+        $('nav#gnb button').eq(_idx).activate();
     }
 }
 

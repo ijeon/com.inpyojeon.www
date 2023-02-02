@@ -105,8 +105,8 @@ footer #clock.set.hide div { opacity:0; }
 .cave section .item img { width:100%; display:block; }
 .cave section .item h2 { margin-bottom:0; }
 .cave section .item h3 { margin-top:0.5rem; }
-.cave #top { position:fixed; bottom:1rem; right:1rem; width:3rem; height:3rem; background-color:#333; border-radius:50%; border:1px solid #777; opacity:0; background-image:url(../img/totop.svg); background-size:2rem; background-position:center; background-repeat:no-repeat; transition:all .2s ease-in-out; }
-.cave #top.active { opacity:0.8; }
+.cave #top { position:fixed; bottom:1rem; right:1rem; width:3rem; height:3rem; background-color:#333; border-radius:50%; border:1px solid #777; opacity:0; background-image:url(../img/totop.svg); background-size:2rem; background-position:center; background-repeat:no-repeat; transition:all .2s ease-in-out; visibility:hidden; }
+.cave #top.active { opacity:0.8; visibility:visible; }
 
 @media all and (min-width: 640px) {
     nav#gnb button:hover { background-color:#333; }
@@ -123,4 +123,5 @@ footer #clock.set.hide div { opacity:0; }
     .cave { padding-bottom:2rem; }
     .cave section { border-radius:0.5rem; }
     .cave section:first-of-type { border-radius:0 0.5rem 0.5rem 0.5rem; }
+    .cave #top { display:none; }
 }

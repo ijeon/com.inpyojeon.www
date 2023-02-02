@@ -96,7 +96,8 @@ footer #clock.set.hide div { opacity:0; }
 .cave article > h1 { text-align:center; padding-top:3rem; }
 .cave section.showroom { display:grid; grid-template-columns:repeat(auto-fill, minmax(40%, 1fr)); grid-gap:2rem 1rem; }
 .cave section .item { width:100% }
-.cave section .item img { width:100%; display:block; margin-bottom:1rem; }
+.cave section .item button { width:100%; display:block; margin-bottom:1rem; }
+.cave section .item img { width:100%; display:block; }
 .cave section .item h2 { margin-bottom:0; }
 .cave section .item h3 { margin-top:0.5rem; }
 

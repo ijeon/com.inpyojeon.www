@@ -29,7 +29,7 @@ body.eng .eng { display:block; }
 .dim { position:fixed; display:none; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,.6); z-index:10; padding:1rem; }
 .dim.active { display:block; }
 .dim:after { content:'화면을 클릭 또는 터치하시면 닫힙니다.'; position:absolute; top:0; left:0; width:100%; padding:0.5rem; background-color:#444; text-align:center; }
-body.eng .dim:after { content:'Click or touch anywhere to close.'; }
+body.eng .dim:after, .cave .dim:after { content:'Click or touch anywhere to close.'; }
 .dim img { position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); max-width:calc(100% - 2rem); max-height:calc(100% - 4rem); }
 
 nav#gnb, nav#tags, article { max-width:800px; margin:0 auto; }
@@ -105,6 +105,8 @@ footer #clock.set.hide div { opacity:0; }
 .cave section .item img { width:100%; display:block; }
 .cave section .item h2 { margin-bottom:0; }
 .cave section .item h3 { margin-top:0.5rem; }
+.cave #top { position:fixed; bottom:1rem; right:1rem; width:3rem; height:3rem; background-color:#333; border-radius:50%; border:1px solid #777; opacity:0; background-image:url(../img/totop.svg); background-size:2rem; background-position:center; background-repeat:no-repeat; transition:all .2s ease-in-out; }
+.cave #top.active { opacity:0.8; }
 
 @media all and (min-width: 640px) {
     nav#gnb button:hover { background-color:#333; }

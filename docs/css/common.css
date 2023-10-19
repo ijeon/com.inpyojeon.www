@@ -74,9 +74,7 @@ main article p { margin-top:0.75rem; }
 work { display: block; }
 work:not(:last-of-type) { margin-bottom:1.75rem; padding-bottom:1.75rem; border-bottom:1px dashed #333; }
 imgslide { display: flex; gap:0.5rem; margin-top:1.25rem; flex-wrap: wrap; }
-imgslide button { width:5.5rem; overflow: hidden; }
-imgslide button img { opacity:0.75; transition: 0.15s all ease-in-out; }
-imgslide button:hover img { opacity:1; transform:scale(105%); }
+imgslide button { width:4.5rem; overflow: hidden; }
 
 @media all and (min-width: 640px) {
     lightbox { top:2.5rem; left:2.5rem; width:calc(100% - 5rem); height:calc(100% - 5rem); }
@@ -85,4 +83,7 @@ imgslide button:hover img { opacity:1; transform:scale(105%); }
     header button#nav-work:hover { background-image: url(../img/folder-opened.svg); }
     header button#nav-contact:hover { background-image: url(../img/mail-out.svg); }
     header button#nav-lang:hover::before { content:'KR'; }
+    imgslide button { width:5.5rem; overflow: hidden; }
+    imgslide button img { opacity:0.75; transition: 0.15s all ease-in-out; }
+    imgslide button:hover img { opacity:1; transform:scale(105%); }
 }

@@ -1,17 +1,20 @@
 $(document)
-  .on("click", "header nav button", scrollPage)
+  .on("click", "header .logo, header nav button", scrollPage)
   .on("click", ".showmore", showMore)
   .on("click", "#translate", toggleLang)
   .on("click", "#mode", toggleMode);
 
 function scrollPage() {
-  var _target = $(this).data("target");
-  var _rem = parseInt($("html").css("font-size"));
-  var _padding = $("header").outerHeight() + _rem * 0.75;
+  if ($(this).hasClass('logo')) {    
+    var _targetTop = 0;
+  } else {
+    var _target = $(this).data("target");
+    var _rem = parseInt($("html").css("font-size"));
+    var _padding = $("header").outerHeight() + _rem * 0.75;    
+    var _targetTop = $(_target).offset().top - _padding;
+  }
   var _currentTop = $("html").scrollTop();
-  var _targetTop = $(_target).offset().top - _padding;
   var _duration = Math.abs(_targetTop - _currentTop) * 0.5;
-  console.log(_duration);
   $("html, body").stop().animate(
     {
       scrollTop: _targetTop,

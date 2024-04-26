@@ -152,7 +152,7 @@ header .wrap {
   flex-direction: row;
   justify-content: space-between;
 }
-header #logo {
+header .logo {
   display: block;
   font-weight: 600;
 }
@@ -249,7 +249,7 @@ footer {
   header .wrap {
     flex-direction: column;
     gap: 0.5rem;
-    padding: 0 2.5rem;
+    padding: 0 3rem;
   }
   header nav {
     justify-content: center;

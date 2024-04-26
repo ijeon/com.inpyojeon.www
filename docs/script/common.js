@@ -21,7 +21,7 @@ function scrollPage() {
 }
 
 function showMore() {
-  $(this).parent().toggleClass("_opened");
+  $('.list').parent().toggleClass("_opened");
 }
 
 function toggleMode() {
@@ -32,7 +32,7 @@ function toggleLang() {
   var _currentLang = $("html").attr("lang");
   if (_currentLang == "en") {
     $("html").attr("lang", "ko");
-    $("body").removeClass("en").addClass("ko");
+    $("body").removeClass("en").addClass("ko");    
   } else {
     $("html").attr("lang", "en");
     $("body").removeClass("ko").addClass("en");

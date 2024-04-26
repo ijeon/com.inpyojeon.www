@@ -19,27 +19,48 @@
     <script src="script/swiper-bundle.min.js"></script>
     <script src="script/common.js" defer></script>
   </head>
-  <body class="dark">
+  <body class="dark en">
     <header>
       <div class="wrap">
         <button id="logo">INPYO JEON</button>
-        <nav>
+        <nav class="eng">
           <button data-target="#about">ABOUT</button>
           <button data-target="#work">WORK</button>
           <button data-target="#contact">CONTACT</button>
         </nav>
+        <nav class="kor">
+          <button data-target="#about">소개</button>
+          <button data-target="#work">작업</button>
+          <button data-target="#contact">연락처</button>
+        </nav>
+        <button id="translate" class="icon"></button>
+        <button id="mode" class="icon"></button>
       </div>
     </header>
     <main>
       <section id="about">
-        <div class="wrap">
+        <div class="wrap eng">
           <h1>ABOUT</h1>
           <article>
-            <b>Inpyo Jeon</b> has been translating American comics and graphic
-            novels into Korean since 2019, and began his writing career with
-            <b>Muninn</b>, a short Batman story collected in
-            <b>Batman: The World</b>
-            anthology published by DC Comics in celebration of Batman Day 2021.
+            <p>
+              <b>Inpyo Jeon</b> has been translating American comics and graphic
+              novels into Korean since 2019, and began his writing career with
+              <b>Muninn</b>, a short Batman story collected in
+              <b>Batman: The World</b>
+              anthology published by DC Comics in celebration of Batman Day
+              2021.
+            </p>
+          </article>
+        </div>
+        <div class="wrap kor">
+          <h1>소개</h1>
+          <article>
+            <p>
+              <b>전인표</b>는 2019년부터 아메리칸 코믹스와 그래픽 노블을
+              번역했으며, 2021년 배트맨 데이를 기념하여 출간된
+              <b>배트맨: 더 월드</b>에 수록된 단편, <b>무닌</b>을 통해 작가
+              커리어를 시작했다.
+            </p>
           </article>
         </div>
       </section>

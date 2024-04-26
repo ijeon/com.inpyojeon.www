@@ -147,6 +147,7 @@ header {
   border-bottom: 1px dashed var(--color-hr);
 }
 header .wrap {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -158,6 +159,31 @@ header #logo {
 header nav {
   display: flex;
   gap: 0.75rem;
+  margin-right: 4.5rem;
+}
+.icon {
+  position: absolute;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 0;
+  background-position: center;
+  background-size: 1.25rem;
+  background-repeat: no-repeat;
+}
+#translate.icon {
+  right: 3rem;
+  background-image: url(../img/toggle-language.svg);
+}
+#mode.icon {
+  right: 1rem;
+  background-image: url(../img/toggle-mode.svg);
+}
+.dark #translate.icon {
+  background-image: url(../img/toggle-language-white.svg);
+}
+.dark #mode.icon {
+  background-image: url(../img/toggle-mode-white.svg);
 }
 main {
   padding: 0.75rem 0;
@@ -204,6 +230,10 @@ section#work article {
 footer {
   border-top: 1px dashed var(--color-hr);
 }
+.en .kor,
+.ko .eng {
+  display: none;
+}
 
 /* <= 800px */
 @media screen and (max-width: 50rem) {
@@ -219,9 +249,15 @@ footer {
   header .wrap {
     flex-direction: column;
     gap: 0.5rem;
+    padding: 0 2.5rem;
   }
   header nav {
     justify-content: center;
+    margin-right: 0;
+  }
+  #translate.icon {
+    right: auto;
+    left: 1rem;
   }
   .work {
     flex-basis: 100%;

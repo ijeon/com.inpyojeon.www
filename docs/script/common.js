@@ -1,6 +1,8 @@
 $(document)
   .on("click", "header nav button", scrollPage)
-  .on("click", ".showmore", showMore);
+  .on("click", ".showmore", showMore)
+  .on("click", "#translate", toggleLang)
+  .on("click", "#mode", toggleMode);
 
 function scrollPage() {
   var _target = $(this).data("target");
@@ -20,4 +22,19 @@ function scrollPage() {
 
 function showMore() {
   $(this).parent().toggleClass("_opened");
+}
+
+function toggleMode() {
+  $("body").toggleClass("dark");
+}
+
+function toggleLang() {
+  var _currentLang = $("html").attr("lang");
+  if (_currentLang == "en") {
+    $("html").attr("lang", "ko");
+    $("body").removeClass("en").addClass("ko");
+  } else {
+    $("html").attr("lang", "en");
+    $("body").removeClass("ko").addClass("en");
+  }
 }

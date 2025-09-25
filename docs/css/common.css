@@ -215,12 +215,12 @@ h1 {
   flex-wrap: wrap;
   gap: 0 0.5rem;
 }
+.link-wrap._work {
+  gap: 1rem 0.5rem;
+}
 .link-wrap > a,
 .link-wrap > div {
   width: calc((100% - 1rem) / 3);
-}
-.work-wrap {
-  gap: 1rem 0.5rem;
 }
 img {
   border: 0.4rem ridge var(--color-hr);
@@ -265,6 +265,36 @@ footer button {
   .tablet {
     display: block;
   }
+  .link-wrap._main a:nth-child(1) {
+    order: 1;
+  }
+  .link-wrap._main a:nth-child(4) {
+    order: 2;
+  }
+  .link-wrap._main a:nth-child(7) {
+    order: 3;
+  }
+  .link-wrap._main a:nth-child(2) {
+    order: 4;
+  }
+  .link-wrap._main a:nth-child(5) {
+    order: 5;
+  }
+  .link-wrap._main a:nth-child(8) {
+    order: 6;
+  }
+  .link-wrap._main a:nth-child(3) {
+    order: 7;
+  }
+  .link-wrap._main a:nth-child(6) {
+    order: 8;
+  }
+  .link-wrap._main a:nth-child(9) {
+    order: 9;
+  }
+  .link-wrap._work {
+    gap: 1rem 0.5rem;
+  }
 }
 @media screen and (max-width: 680px) {
   body {
@@ -274,6 +304,33 @@ footer button {
   .link-wrap > a,
   .link-wrap > div {
     width: calc((100% - 0.5rem) / 2);
+  }
+  .link-wrap._main a:nth-child(1) {
+    order: 1;
+  }
+  .link-wrap._main a:nth-child(6) {
+    order: 2;
+  }
+  .link-wrap._main a:nth-child(2) {
+    order: 3;
+  }
+  .link-wrap._main a:nth-child(7) {
+    order: 4;
+  }
+  .link-wrap._main a:nth-child(3) {
+    order: 5;
+  }
+  .link-wrap._main a:nth-child(8) {
+    order: 6;
+  }
+  .link-wrap._main a:nth-child(4) {
+    order: 7;
+  }
+  .link-wrap._main a:nth-child(9) {
+    order: 8;
+  }
+  .link-wrap._main a:nth-child(5) {
+    order: 9;
   }
   #footerlink,
   #hovertip {
@@ -300,8 +357,37 @@ footer button {
   }
 }
 @media screen and (max-width: 460px) {
-  .work-wrap .work {
+  .link-wrap > a,
+  .link-wrap > div {
     width: 100%;
+  }
+
+  .link-wrap._main a:nth-child(1) {
+    order: 1;
+  }
+  .link-wrap._main a:nth-child(2) {
+    order: 2;
+  }
+  .link-wrap._main a:nth-child(3) {
+    order: 3;
+  }
+  .link-wrap._main a:nth-child(4) {
+    order: 4;
+  }
+  .link-wrap._main a:nth-child(5) {
+    order: 5;
+  }
+  .link-wrap._main a:nth-child(6) {
+    order: 6;
+  }
+  .link-wrap._main a:nth-child(7) {
+    order: 7;
+  }
+  .link-wrap._main a:nth-child(8) {
+    order: 8;
+  }
+  .link-wrap._main a:nth-child(9) {
+    order: 9;
   }
   .double {
     justify-content: center;

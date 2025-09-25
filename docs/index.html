@@ -4,407 +4,161 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Inpyo Jeon(전인표) - Comic Book Creator, Translator."
-    />
-    <meta
-      name="google-site-verification"
-      content="v8UmyFeoq5xsqtdqgPc02nPQpg2B0Ca_OMry9SODJM4"
-    />
+    <meta name="description" content="Inpyo Jeon(전인표) - Writer, Comic Book Creator" />
+    <meta name="google-site-verification" content="v8UmyFeoq5xsqtdqgPc02nPQpg2B0Ca_OMry9SODJM4" />
     <title>Inpyo Jeon</title>
-    <link href="style/swiper-bundle.min.css" rel="stylesheet" />
-    <link href="style/common.css" rel="stylesheet" />
-    <script src="script/jquery-4.0.0-beta.min.js"></script>
-    <script src="script/swiper-bundle.min.js"></script>
-    <script src="script/common.js" defer></script>
+    <link href="./css/common.css" rel="stylesheet" />
+    <script src="./js/jquery-3.7.1.min.js"></script>
   </head>
-  <body class="dark en">
+  <body>
     <header>
-      <div class="wrap">
-        <button class="logo eng">INPYO JEON</button>
-        <button class="logo kor">전인표</button>
-        <nav class="eng">
-          <button data-target="#about">ABOUT</button>
-          <button data-target="#work">WORK</button>
-          <button data-target="#contact">CONTACT</button>
-        </nav>
-        <nav class="kor">
-          <button data-target="#about">소개</button>
-          <button data-target="#work">작업</button>
-          <button data-target="#contact">연락처</button>
-        </nav>
-        <button id="translate" class="icon"></button>
-        <button id="mode" class="icon"></button>
-      </div>
+      <nav id="gnb">
+        <button class="_active" data-tip="Introduction"><em>B</em>io</button>
+        <button data-tip="Selected works"><em>W</em>ork</button>
+        <button data-tip="Contact info"><em>H</em>elp</button>
+      </nav>
     </header>
     <main>
-      <section id="about">
-        <div class="wrap eng">
-          <h1>ABOUT</h1>
-          <article>
-            <p>
-              <b>Inpyo Jeon</b> has been translating American comics and graphic
-              novels into Korean for Sigongsa since 2019, and began his writing
-              career with <b>Muninn</b>, a short Batman story collected in
-              <b>Batman: The World</b> anthology published by DC Comics in
-              celebration of Batman Day 2021.
-            </p>
-          </article>
+      <section class="_active">
+        <h1>Introduction</h1>
+        <div class="double">
+          <div>
+            <img id="profile" src="img/profile.jpg" />
+          </div>
+          <p>
+            <em>Inpyo Jeon</em> is a Korean writer who mainly works on story-driven projects in illustrated formats such as American comics
+            and Japanese manga. <br /><br />
+            After receiving a bachelor's degree in Computer Science and Engineering from Seoul National University of Science and
+            Technology, he worked as a developer until his mid-30s. While working as a senior developer, he also took on book translation.
+            It was during this time that the audacious thought, “How hard could it be?” crossed his mind, leading him to start writing in
+            earnest. By the time he realized just how hard it was, he had already thrown his resignation letter in his boss's face and
+            stormed out to become a full-time writer.
+            <br /><br />
+            Jeon broke into the comics industry in 2021 with <em>Muninn</em>, a 10-page short story published in the
+            <em>Batman: The World</em> anthology released by DC Comics for Batman Day. He later contributed <em>Copycat</em>, another short
+            story set in the same universe, to <em>Joker: The World</em>, and co-created the creator-owned series <em>Vermilion</em> with
+            artist Danny Kim. In 2025, he wrote <em>Hotel Bethesda</em>, an urban fantasy comic starring YDG, the actor and musician best
+            known for his role in <em>Squid Game</em>. <br /><br />
+            Once a highly accomplished programmer at a major corporation—renowned for single-handedly winning a team hackathon—he now ekes
+            out a modest living writing stories in a small back room.
+          </p>
         </div>
-        <div class="wrap kor">
-          <h1>소개</h1>
-          <article>
-            <p>
-              <b>전인표</b>는 2019년부터 시공사에서 아메리칸 코믹스와 그래픽
-              노블을 번역했으며, 2021년 배트맨 데이를 기념하여 출간된
-              <b>배트맨: 더 월드</b>에 수록된 단편, <b>무닌</b>을 통해 스토리
-              작가로서 활동을 시작했다.
-              <br />
-            </p>
-          </article>
-        </div>
-      </section>
-      <section id="work">
-        <div class="wrap eng">
-          <h1>WORK</h1>
-          <article>
-            <div class="work">
-              <h2>Vermilion (TBD)</h2>
-              <div class="imgwrap">
-                <img src="img/int-vermilion.png" />
-              </div>
-              <p>
-                W) Inpyo Jeon<br />
-                A) Danny Kim<br />
-              </p>
-            </div>
-            <div class="work">
-              <h2>The Diner (TBD)</h2>
-              <div class="imgwrap">
-                <img src="img/int-thediner.png" />
-              </div>
-              <p>
-                W) Inpyo Jeon<br />
-                A) Euyugi<br />
-              </p>
-            </div>
-            <div class="work">
-              <h2>Copycat (DC Comics, 2024)</h2>
-              <div class="imgwrap">
-                <img src="img/int-jtw.png" />
-              </div>
-              <p>
-                W) Inpyo Jeon<br />
-                A) Jaekwang Park<br />
-                L) Dongmin Baek<br />
-                E) Soyong Baek
-              </p>
-              <div class="links">
-                <a href="https://a.co/d/8FNSM5U" target="_blank"
-                  >Amazon - Joker: The World</a
-                >
-              </div>
-            </div>
-            <div class="work">
-              <h2>Muninn (DC Comics, 2021)</h2>
-              <div class="imgwrap">
-                <img src="img/int-btw.png" />
-              </div>
-              <p>
-                W) Inpyo Jeon<br />
-                A) Jaekwang Park, Kim Jung Gi<br />
-                CA) Kim Jung Gi<br />
-                L) Dongmin Baek<br />
-                E) Soyong Baek
-              </p>
-              <div class="links">
-                <a href="https://a.co/d/9RTtEbe" target="_blank"
-                  >Amazon - Batman: The World</a
-                ><br />
-                <a
-                  href="https://www.yes24.com/Product/Goods/103710577"
-                  target="_blank"
-                  >Yes24 - 배트맨: 더 월드 (한국어판)</a
-                ><br />
-              </div>
-            </div>
-            <div class="work">
-              <h2>Translation (ENG to KOR, 2019-)</h2>
-              <div class="imgwrap">
-                <img src="img/int-trans.png" />
-              </div>
-              <div class="list">
-                <p>Gatchaman #1 (Mad Cave Studios)</p>
-                <p>FCBD 2019 Spider-man/Venom #1 (Marvel)</p>
-                <p>Joker: The Official Script Book (Insight Editions)</p>
-                <p>Superman '78 (DC Comics)</p>
-                <p>Batman '89 (DC Comics)</p>
-                <p>Batman: Three Jokers (DC Comics)</p>
-                <p>Batman: The Imposter (DC Comics)</p>
-                <p>Batman: White Knight (DC Comics)</p>
-                <p>Batman: White Knight Presents: Von Freeze (DC Comics)</p>
-                <p>Batman: Curse of the White Knight (DC Comics)</p>
-                <p>Batman: White Knight Presents: Harley Quinn (DC Comics)</p>
-                <p>Batman Vol. 1: Their Dark Designs (DC Comics)</p>
-                <p>Batman Vol. 2: The Joker War (DC Comics)</p>
-                <p>
-                  The Joker 80th Anniversary 100-Page Super Spectacular (DC
-                  Comics)
-                </p>
-                <p>Dark Days: The Road to Metal (DC Comics)</p>
-                <p>Dark Nights: Metal (DC Comics)</p>
-                <p>Dark Nights: Metal: Dark Knights Rising (DC Comics)</p>
-                <p>Dark Nights: Metal: The Resistance (DC Comics)</p>
-                <p>Justice League: No Justice (DC Comics)</p>
-                <p>Justice League Vol. 1: The Totality (DC Comics)</p>
-                <p>Justice League Vol. 2: Graveyard of Gods (DC Comics)</p>
-                <p>Justice League Vol. 3: Hawkworld (DC Comics)</p>
-                <p>Justice League Vol. 4: The Sixth Dimension (DC Comics)</p>
-                <p>Justice League Vol. 5: The Doom War (DC Comics)</p>
-                <p>The Batman Who Laughs (DC Comics)</p>
-                <p>
-                  Batman/Superman Vol. 1: Who are the Secret Six? (DC Comics)
-                </p>
-                <p>Batman and Robin Vol. 1: Born to Kill (DC Comics)</p>
-                <p>Detective Comics #1000: The Deluxe Edition (DC Comics)</p>
-                <p>Batman: Last Knight on Earth (DC Comics)</p>
-                <p>Batman: Battle for the Cowl (DC Comics)</p>
-                <p>Absolute Batman: The Black Mirror (DC Comics)</p>
-                <p>Batman by Jeph Loeb &amp; Tim Sale Omnibus (DC Comics)</p>
-                <p>Batman: The Long Halloween Special #1 (DC Comics)</p>
-                <p>
-                  Batman: Whatever Happened to the Caped Crusader? (DC Comics)
-                </p>
-                <p>
-                  Superman: Whatever Happened to the Man of Tomorrow? (DC
-                  Comics)
-                </p>
-                <p>Millennium Edition: Detective Comics #27 (DC Comics)</p>
-                <p>Millennium Edition: Batman #1 (DC Comics)</p>
-                <p>
-                  Batgirl and the Birds of Prey Vol. 1: Who is Oracle? (DC
-                  Comics)
-                </p>
-                <p>
-                  Batgirl and the Birds of Prey Vol. 2: Source Code (DC Comics)
-                </p>
-                <p>
-                  Batgirl and the Birds of Prey Vol. 3: Full Circle (DC Comics)
-                </p>
-                <p>Harley Quinn and the Birds of Prey (DC Comics)</p>
-                <p>Joker (DC Comics)</p>
-                <p>Batman: Damned (DC Comics)</p>
-                <p>Joker: Killer Smile (DC Comics)</p>
-                <p>Harleen (DC Comics)</p>
-                <p>DCeased (DC Comics)</p>
-                <p>Batman: Harvest Breed (DC Comics)</p>
-                <p>
-                  Minecraft The Woodsword Chronicles #1: Into the Game! (Random
-                  House Books)
-                </p>
-                <p>
-                  Minecraft The Woodsword Chronicles #2: Night of the Bats!
-                  (Random House Books)
-                </p>
-                <p>
-                  Minecraft The Woodsword Chronicles #3: Deep Dive! (Random
-                  House Books)
-                </p>
-                <p>
-                  Malware Data Science: Attack Detection and Attribution (No
-                  Starch Press)
-                </p>
-                <p>
-                  Impractical Python Projects: Playful Programming Activities to
-                  Make You Smarter (No Starch Press)
-                </p>
-              </div>
-              <a class="showmore" href="javascript:;"></a>
-            </div>
-          </article>
-        </div>
-        <div class="wrap kor">
-          <h1>작업</h1>
-          <article>
-            <div class="work">
-              <h2>버밀리온 (미정)</h2>
-              <div class="imgwrap">
-                <img src="img/int-vermilion.png" />
-              </div>
-              <p>
-                글) 전인표<br />
-                그림) 대니 킴<br />
-              </p>
-            </div>
-            <div class="work">
-              <h2>더 다이너 (미정)</h2>
-              <div class="imgwrap">
-                <img src="img/int-thediner.png" />
-              </div>
-              <p>
-                글) 전인표<br />
-                그림) 으육이<br />
-              </p>
-            </div>
-            <div class="work">
-              <h2>모방범 (DC 코믹스, 2024)</h2>
-              <div class="imgwrap">
-                <img src="img/int-jtw.png" />
-              </div>
-              <p>
-                글) 전인표<br />
-                그림) 박재광<br />
-                식자) 백동민<br />
-                편집) 백소용
-              </p>
-              <div class="links">
-                <a href="https://a.co/d/8FNSM5U" target="_blank"
-                  >아마존 - Joker: The World</a
-                >
-              </div>
-            </div>
-            <div class="work">
-              <h2>무닌 (DC Comics, 2021)</h2>
-              <div class="imgwrap">
-                <img src="img/int-btw.png" />
-              </div>
-              <p>
-                글) 전인표<br />
-                그림) 박재광, 김정기<br />
-                커버) 김정기<br />
-                식자) 백동민<br />
-                편집) 백소용
-              </p>
-              <div class="links">
-                <a href="https://a.co/d/9RTtEbe" target="_blank"
-                  >아마존 - Batman: The World</a
-                ><br />
-                <a
-                  href="https://www.yes24.com/Product/Goods/103710577"
-                  target="_blank"
-                  >예스24 - 배트맨: 더 월드 (한국어판)</a
-                ><br />
-              </div>
-            </div>
-            <div class="work">
-              <h2>도서 번역 (영어-한국어, 2019-)</h2>
-              <div class="imgwrap">
-                <img src="img/int-trans.png" />
-              </div>
-              <div class="list">
-                <p>독수리 오형제 #1 (매드 케이브 스튜디오스)</p>
-                <p>FCBD 2019 스파이더맨/베놈 이슈 (마블)</p>
-                <p>조커: 공식 스크립트 북 (인사이트 에디션즈)</p>
-                <p>슈퍼맨 '78 (DC 코믹스)</p>
-                <p>배트맨 '89 (DC 코믹스)</p>
-                <p>배트맨: 세 명의 조커 (DC 코믹스)</p>
-                <p>배트맨: 임포스터 (DC 코믹스)</p>
-                <p>배트맨: 화이트 나이트 (DC 코믹스)</p>
-                <p>배트맨: 화이트 나이트 프레젠트: 폰 프리즈 (DC 코믹스)</p>
-                <p>배트맨: 화이트 나이트의 저주 (DC 코믹스)</p>
-                <p>배트맨: 화이트 나이트 프레젠트: 할리 퀸 (DC 코믹스)</p>
-                <p>배트맨 Vol. 1: 검은 설계도 (DC 코믹스)</p>
-                <p>배트맨 Vol. 2: 조커 전쟁 (DC 코믹스)</p>
-                <p>조커 80주년 스페셜 (DC 코믹스)</p>
-                <p>배트맨: 로드 투 메탈 (DC 코믹스)</p>
-                <p>배트맨: 메탈 (DC 코믹스)</p>
-                <p>배트맨: 메탈: 다크 나이츠 라이징 (DC 코믹스)</p>
-                <p>배트맨: 메탈: 레지스탕스 (DC 코믹스)</p>
-                <p>저스티스 리그: 노 저스티스 (DC 코믹스)</p>
-                <p>저스티스 리그 Vol. 1: 토탈리티 (DC 코믹스)</p>
-                <p>저스티스 리그 Vol. 2: 신들의 무덤 (DC 코믹스)</p>
-                <p>저스티스 리그 Vol. 3: 호크월드 (DC 코믹스)</p>
-                <p>저스티스 리그 Vol. 4: 6차원 (DC 코믹스)</p>
-                <p>저스티스 리그 Vol. 5: 정의와 파멸의 전쟁 (DC 코믹스)</p>
-                <p>웃는 배트맨 (DC 코믹스)</p>
-                <p>배트맨/슈퍼맨 Vol. 1: 시크릿 식스는 누구인가? (DC 코믹스)</p>
-                <p>배트맨 앤드 로빈 Vol. 1: 본 투 킬 (DC 코믹스)</p>
-                <p>디텍티브 코믹스 #1000 디럭스 에디션 (DC 코믹스)</p>
-                <p>배트맨: 라스트 나이트 온 어스 (DC 코믹스)</p>
-                <p>배트맨: 배틀 포 더 카울 (DC 코믹스)</p>
-                <p>앱솔루트 배트맨: 블랙 미러 (DC 코믹스)</p>
-                <p>제프 로브 &amp; 팀 세일 배트맨 옴니버스 (DC 코믹스)</p>
-                <p>배트맨: 롱 할로윈 스페셜 (DC 코믹스)</p>
-                <p>
-                  배트맨: 망토 두른 십자군에게 무슨 일이 생겼나? (DC 코믹스)
-                </p>
-                <p>슈퍼맨: 내일의 사나이에게 무슨 일이 생겼나? (DC 코믹스)</p>
-                <p>디텍티브 코믹스 #27 밀레니엄 에디션 (DC 코믹스)</p>
-                <p>배트맨 #1 밀레니엄 에디션 (DC 코믹스)</p>
-                <p>
-                  배트걸과 버즈 오브 프레이 Vol. 1: 오라클의 정체는? (DC 코믹스)
-                </p>
-                <p>배트걸과 버즈 오브 프레이 Vol. 2: 소스 코드 (DC 코믹스)</p>
-                <p>배트걸과 버즈 오브 프레이 Vol. 3: 풀 서클 (DC 코믹스)</p>
-                <p>할리 퀸과 버즈 오브 프레이 (DC 코믹스)</p>
-                <p>조커 (DC 코믹스)</p>
-                <p>배트맨: 댐드 (DC 코믹스)</p>
-                <p>조커: 킬러 스마일 (DC 코믹스)</p>
-                <p>할린 (DC 코믹스)</p>
-                <p>디씨즈드 (DC 코믹스)</p>
-                <p>배트맨: 하비스트 브리드 (DC 코믹스)</p>
-                <p>마인크래프트 공식 소설 1: 게임 속으로! (랜덤 하우스 북스)</p>
-                <p>마인크래프트 공식 소설 2: 박쥐들의 밤 (랜덤 하우스 북스)</p>
-                <p>마인크래프트 공식 소설 3: 바닷속으로! (랜덤 하우스 북스)</p>
-                <p>멀웨어 데이터 과학 (노 스타치 프레스)</p>
-                <p>신비한 파이썬 프로젝트 (노 스타치 프레스)</p>
-              </div>
-              <a class="showmore" href="javascript:;"></a>
-            </div>
-          </article>
+        <br />
+        <div class="link-wrap">
+          <a href="https://a.co/d/6xVACYY" target="_blank" data-tip="Purchase Batman: The World">BM_THE_WORLD.AMZ</a>
+          <a href="https://www.youtube.com/watch?v=cu4FQM1_bs4" target="_blank" data-tip="Batman: The World trailer">BM_THE_WORLD.AVI</a>
+          <a href="javascript:$('#gnb button').eq(2).trigger('click');" data-tip="Contact info">Contact</a>
+          <a href="mailto:contact@inpyojeon.com" data-tip="Send email">EMAIL.ME</a>
+          <a href="https://www.instagram.com/inpyowho/" target="_blank" data-tip="Visit Instagram">IG_PROFILE.COM</a>
+          <a href="https://a.co/d/duU2dNB" target="_blank" data-tip="Purchase Joker: The World">JK_THE_WORLD.AMZ</a>
+          <a href="https://www.koreaherald.com/article/2628333" target="_blank" data-tip="The Korea Herald interview">K_HERALD_INT.BAT</a>
+          <a href="https://www.youtube.com/watch?v=0ZqfdSmYOjo" target="_blank" data-tip="Muninn cover live drawing">MUNINN_COVER.AVI</a>
+          <a href="javascript:$('#gnb button').eq(1).trigger('click');" data-tip="Selected works">Projects</a>
         </div>
       </section>
-      <section id="contact">
-        <div class="wrap eng">
-          <h1>CONTACT</h1>
-          <article>
-            <p>
-              Email:
-              <a href="mailto:contact@inpyojeon.com" target="_blank"
-                >contact@inpyojeon.com</a
-              >
-            </p>
-            <p>
-              Instagram:
-              <a href="https://www.instagram.com/inpyowho/" target="_blank"
-                >@inpyowho</a
-              >
-            </p>
-          </article>
+      <section>
+        <h1>Selected Works</h1>
+        <div class="link-wrap work-wrap">
+          <div class="work">
+            <em>Muninn</em>
+            <p>(DC Comics, 2021)</p>
+            <img src="img/work_bm.jpg" />
+            <p>[A1] Jaekwang Park</p>
+            <p>[A2/CA] Kim Jung Gi</p>
+            <p>[L] Dongmin Baek</p>
+            <p>[E1] Marie Javins</p>
+            <p>[E2] Soyong Baek</p>
+            <a href="https://a.co/d/6xVACYY" target="_blank" data-tip="Buy anthology">Batman: The World</a>
+          </div>
+          <div class="work">
+            <em>Copycat</em>
+            <p>(DC Comics, 2024)</p>
+            <img src="img/work_jc.jpg" />
+            <p>[A/CA] Jaekwang Park</p>
+            <p>[L] Dongmin Baek</p>
+            <p>[E1] Katie Kubert</p>
+            <p>[E2] Andrew Marino</p>
+            <a href="https://a.co/d/duU2dNB" target="_blank" data-tip="Buy anthology">Joker: The World</a>
+          </div>
+          <div class="work">
+            <em>Hotel Bethesda</em>
+            <p>(TDL Studios, 2025)</p>
+            <img src="img/work_hb.jpg" />
+            <p>[A/CA] Joanne Kim</p>
+            <p>[L] Kyung Park</p>
+            <p>[E1] Bob Layton</p>
+            <p>[E2] Joey Croner</p>
+            <p>[VA1] Colleen Doran</p>
+            <p>[VA2] Tokitokoro</p>
+          </div>
+          <div class="work">
+            <em>Vermilion</em>
+            <p>(Nova Comics, 2025)</p>
+            <img src="img/work_vm.jpg" />
+            <p>[A/CA] Danny Kim</p>
+            <p>[L] Dongmin Baek</p>
+            <p>[E] Soyong Baek</p>
+            <a href="https://www.instagram.com/p/DOWj_DUk7po/" target="_blank" data-tip="Limited ashcan">NYCC 2025 Exclusive</a>
+          </div>
+          <div class="work">
+            <em>Spearhead</em>
+            <p>(Nova Comics, TBA)</p>
+            <img src="img/work_no.jpg" />
+            <p>[A/CA] Kangto Lee</p>
+            <p>[L] Dongmin Baek</p>
+            <p>[E] Soyong Baek</p>
+          </div>
         </div>
-        <div class="wrap kor">
-          <h1>연락처</h1>
-          <article>
-            <p>
-              이메일:
-              <a href="mailto:contact@inpyojeon.com" target="_blank"
-                >contact@inpyojeon.com</a
-              >
-            </p>
-            <p>
-              인스타그램:
-              <a href="https://www.instagram.com/inpyowho/" target="_blank"
-                >@inpyowho</a
-              >
-            </p>
-          </article>
-        </div>
+        <br />
+        <p><em>*</em> All characters featured in the thumbnail images are copyrighted by their respective publishers and/or creators.</p>
+      </section>
+      <section>
+        <h1>Contact Info</h1>
+        <p class="pc">
+          '####:'##::: ##:'########::'##:::'##::'#######::<br />
+          . ##:: ###:: ##: ##.... ##:. ##:'##::'##.... ##:<br />
+          : ##:: ####: ##: ##:::: ##::. ####::: ##:::: ##:<br />
+          : ##:: ## ## ##: ########::::. ##:::: ##:::: ##:<br />
+          : ##:: ##. ####: ##.....:::::: ##:::: ##:::: ##:<br />
+          : ##:: ##:. ###: ##::::::::::: ##:::: ##:::: ##:<br />
+          '####: ##::. ##: ##::::::::::: ##::::. #######::<br />
+          ....::..::::..::..::::::::::::..::::::.......:::
+        </p>
+        <p class="tablet">
+          ::::::'##:'########::'#######::'##::: ##:<br />
+          :::::: ##: ##.....::'##.... ##: ###:: ##:<br />
+          :::::: ##: ##::::::: ##:::: ##: ####: ##:<br />
+          :::::: ##: ######::: ##:::: ##: ## ## ##:<br />
+          '##::: ##: ##...:::: ##:::: ##: ##. ####:<br />
+          '##::: ##: ##::::::: ##:::: ##: ##:. ###:<br />
+          . ######:: ########:. #######:: ##::. ##:<br />
+          :......:::........:::.......:::..::::..::
+        </p>
+        <p class="mobile">
+          '####:::::::'##:<br />
+          . ##:::::::: ##:<br />
+          : ##:::::::: ##:<br />
+          : ##:::::::: ##:<br />
+          : ##::'##::: ##:<br />
+          : ##:: ##::: ##:<br />
+          '####:. ######::<br />
+          ....:::......:::
+        </p>
+        <br />
+        <p>
+          Thank you for visiting my website. I am not taking on translation work at the moment. For other business inquiries, please contact
+          me by email.
+        </p>
+        <br />
+        <p>Email: <a href="mailto:contact@inpyojeon.com" data-tip="Send email">contact@inpyojeon.com</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/inpyowho/" target="_blank" data-tip="Visit Instagram">@inpyowho</a></p>
       </section>
     </main>
     <footer>
-      <div class="wrap eng">
-        <p>
-          *All characters featured in the thumbnails are copyrighted by their
-          respective publishers and/or creators.
-        </p>
-      </div>
-      <div class="wrap kor">
-        <p>
-          *썸네일에 등장하는 모든 캐릭터의 저작권은 각 출판사 및 창작자가
-          소유하고 있습니다.
-        </p>
-      </div>
+      <button id="footerlink" data-tip="Switch theme">T=Theme Swap</button>
+      <p id="hovertip"></p>
+      <p id="timestamp"></p>
     </footer>
   </body>
+  <script src="./js/layout.js"></script>
 </html>

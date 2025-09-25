@@ -1,0 +1,322 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+body {
+  min-height: 100vh;
+}
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label,
+p,
+a {
+  line-height: 1;
+  font-size: 1rem;
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+b {
+  font-weight: 400;
+  text-wrap: balance;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+textarea:not([rows]) {
+  min-height: 10em;
+}
+:target {
+  scroll-margin-block: 5ex;
+}
+a,
+button {
+  cursor: pointer;
+  color: var(--color-co);
+}
+button {
+  background: transparent;
+  border: none;
+}
+a {
+  text-decoration: none;
+}
+em {
+  font-style: normal;
+  font-weight: 400;
+  color: #fff;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 폰트 출처: https://github.com/hurss/fonts */
+@font-face {
+  font-family: "DOSMyungjo";
+  src: url("DOSMyungjo.ttf") format("truetype");
+}
+:root {
+  font-size: 20px;
+  font-weight: 400;
+  --color-co: #bbb;
+  --color-bg: #111;
+  --color-txt: #111;
+  --color-txt-bottom: #111;
+  --color-hr: #888;
+  --color-hr-bottom: #888;
+  --color-link: #41d741;
+  --color-null: #333;
+  --color-scroll: #111;
+}
+:root .blue {
+  --color-bg: #161c8b;
+  --color-txt-bottom: #fff;
+  --color-hr-bottom: #20a595;
+  --color-link: #fff;
+  --color-null: #555;
+  --color-scroll: #333;
+}
+a::before,
+a::after {
+  color: var(--color-link);
+}
+a::before {
+  content: "<";
+  margin-right: 0.1rem;
+}
+a::after {
+  content: ">";
+  margin-left: 0.1rem;
+}
+body {
+  font-family: "DOSMyungjo";
+  font-size: 1rem;
+  color: var(--color-co);
+  min-width: 15rem;
+  padding: 2rem 1rem 0;
+  background-color: var(--color-null);
+}
+header,
+main,
+footer {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+header {
+  position: sticky;
+  top: 0;
+}
+header,
+footer {
+  z-index: 10;
+}
+#gnb {
+  display: flex;
+  background-color: var(--color-hr);
+  padding: 0 1rem;
+}
+#gnb button {
+  color: var(--color-txt);
+  padding: 0 0.5rem;
+}
+#gnb button:last-child {
+  margin-left: auto;
+}
+#gnb button._active {
+  background-color: var(--color-bg);
+  color: var(--color-co);
+}
+main {
+  height: calc(100vh - 6rem);
+  max-height: 28rem;
+  min-height: 20rem;
+  padding: 0.5rem 0.25rem;
+  background-color: var(--color-bg);
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-scroll) var(--color-hr);
+}
+section {
+  position: relative;
+  display: none;
+  border: 0.1rem solid var(--color-hr);
+  padding: 1rem 0.5rem;
+}
+section._active {
+  display: block;
+}
+h1 {
+  position: absolute;
+  top: -0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-hr);
+  color: var(--color-bg);
+  padding: 0 0.5rem;
+  white-space: nowrap;
+}
+.double {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.double div {
+  width: calc(33.33% - 0.5rem);
+}
+.double p {
+  width: calc(66.67% - 0.5rem);
+}
+.link-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.5rem;
+}
+.link-wrap > a,
+.link-wrap > div {
+  width: calc((100% - 1rem) / 3);
+}
+.work-wrap {
+  gap: 1rem 0.5rem;
+}
+img {
+  border: 0.4rem ridge var(--color-hr);
+  margin: 0.25rem 0;
+}
+footer {
+  padding: 0 0.5rem;
+  background-color: var(--color-hr-bottom);
+  display: flex;
+}
+footer p,
+footer button {
+  color: var(--color-txt-bottom);
+}
+#footerlink {
+  border-right: 0.1rem solid var(--color-txt-bottom);
+  padding-right: 1rem;
+}
+#hovertip {
+  padding-left: 1rem;
+}
+#timestamp {
+  color: var(--color-txt);
+  border-left: 0.1rem solid var(--color-txt);
+  padding-left: 2rem;
+  margin-left: auto;
+}
+.pc,
+.mobile,
+.tablet {
+  display: none;
+}
+@media screen and (min-width: 681px) {
+  a:hover {
+    color: #fff;
+  }
+  #gnb button:hover {
+    background-color: var(--color-bg);
+    color: var(--color-co);
+  }
+  .pc,
+  .tablet {
+    display: block;
+  }
+}
+@media screen and (max-width: 680px) {
+  body {
+    padding: 0;
+    background-color: var(--color-bg);
+  }
+  .link-wrap > a,
+  .link-wrap > div {
+    width: calc((100% - 0.5rem) / 2);
+  }
+  #footerlink,
+  #hovertip {
+    display: none;
+  }
+  #timestamp {
+    width: 100%;
+    border: none;
+    padding: 0;
+    text-align: right;
+  }
+  .double div {
+    width: 40%;
+  }
+  .double p {
+    width: calc(60% - 1rem);
+  }
+  .tablet {
+    display: block;
+  }
+  main {
+    height: calc(100vh - 2rem);
+    max-height: calc(100vh - 2rem);
+  }
+}
+@media screen and (max-width: 460px) {
+  .work-wrap .work {
+    width: 100%;
+  }
+  .double {
+    justify-content: center;
+  }
+  .double div {
+    width: 60%;
+    text-align: center;
+  }
+  .double p {
+    width: 100%;
+  }
+  .mobile {
+    display: block;
+  }
+  .tablet {
+    display: none;
+  }
+}
